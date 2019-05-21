@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS results (
+id SERIAL PRIMARY KEY,
+img1 TEXT,
+img2 TEXT,
+weight INTEGER,
+bmi INTEGER
+);

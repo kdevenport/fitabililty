@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS goals (
+id INTEGER,
+goal1 TEXT,
+goal2 TEXT,
+goal3 TEXT
+);

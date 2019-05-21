@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter } from 'react-router-dom';
+// import Login from './Components/Login/Login';
+// import Abs from './Components/Abs/Abs';
+// import Arms from './Components/Arms/Arms';
+// import Back from './Components/Back/Back';
+//  import Chest from './Components/Chest/Chest';
+// import Legs from './Components/Legs/Legs';
+//  import Shoulders from './Components/Shoulders/Shoulders';
+import Header from './Components/Header/Header';
+import Navbar from './Components/Navbar/Navbar';
+// import Form from './Components/Form/Form';
+// import Goals from './Components/Goals/Goals';
+// import Update from './Components/Update/Update';
+import Routes from './Routes';
+// import Workouts from './Components/Workouts/Workouts';
+
+
+
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+       <Header /> 
+       <Navbar />
+       { Routes }
       </div>
     );
   }
