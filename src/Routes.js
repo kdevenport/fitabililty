@@ -12,11 +12,15 @@ import Workouts from './Components/Workouts/Workouts';
 import Results from './Components/Results/Results';
 import Form from './Components/Form/Form';
 import Update from './Components/Update/Update';
-import Goals from './Components/Goals/Goals';
+import Login from './Components/Login/Login';
+import Register from './Components/Register/Register';
+
 
 export default(
     <Switch>
-        <Route component = { Profile } exact path = '/' />
+        <Route component = { Login } exact path = '/login' />
+        <Route component = { Register } path = '/register'/>
+        <Route component = { Profile }  path = '/profile' />
         <Route component =  { Abs } path = '/abs' />
         <Route component =  { Arms } path = '/arms' />
         <Route component = { Back } path = '/back' />
@@ -27,6 +31,5 @@ export default(
         <Route component =  { Workouts } path = '/workouts' />
         <Route component = { Form } path ='/updateprofile'/>
         <Route component = { Update } path ='/updateresults'/>
-        <Route component = { Goals } path ='/updategoals'/>
     </Switch>
 )

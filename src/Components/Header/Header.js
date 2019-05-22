@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Form from '../Form/Form';
 import Update from '../Update/Update';
-import Goals from '../Goals/Goals';
+
 
 function Header(){
     return(
@@ -21,9 +21,6 @@ function Header(){
                         </li>
                         <li class="nav-item">
                             <Link  class="nav-link" to="/updateresults" component = { Update }>Update Results</Link>
-                        </li>
-                        <li class="nav-item">
-                            <Link class="nav-link" to="/updategoals" component = { Goals }>Update Goals</Link>
                         </li>
                         <li class="nav-item">
                             <Link class="nav-link" to="/logout">Logout</Link>
