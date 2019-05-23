@@ -40,6 +40,15 @@ function(accessToken, refreshToken, extraParams, profile, done) {
     return done(null, profile);
 }
 ));
+// receive properties you want from the user object
+passport.serializeUser( (user, done) => {
+    done(null, { clientID: user.id, email: user._json.email, name: user._json.name});
+});
+// execute any necessary logic on the new version of the user object
+passport.deserializeUser( (obj, done) => {
+    done(null, obj);
+});
+
 
 
 
@@ -62,10 +71,16 @@ app.get('/api/profile', controller.get_profile);
 app.post('/api/profile', controller.create_profile);
 app.put('/api/profile/:id', controller.update_profile);
 
-// //User Login Route
-// app.get('/api/login', (req, res) => {
-//     res.send('login');
-// })
+// User login endpoint
+app.get('/login',
+passport.authenticate('auth0',
+{ successRedirect: '/profile', failureRedirect: '/login', failureFlash: true}
+) );
+
+app.get('/profile', (req, res, next) => {
+    res.status(200).send(profile);
+});
+
 
 // //User Regiser Route
 // app.get('/api/register', (req, res) => {
