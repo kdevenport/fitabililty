@@ -14,7 +14,7 @@ class Profile extends Component{
         this.getProfile();
     }
     getProfile = () => {
-        axios.get('/api/profile').then((response) => {
+        axios.get('/api/profile' ).then((response) => {
             this.setState({
                 profiles: response.data
             })
@@ -22,6 +22,7 @@ class Profile extends Component{
     }
     
     render(){
+        console.log(this.state.profiles)
         const mappedprofile = this.state.profiles.map((profile, i) => {
             return <Uprofile key={i} profile={profile}/>
         })

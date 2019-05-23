@@ -19,7 +19,7 @@ class Navbar extends Component{
     render(){
         return(
             <ul class="list-group">
-                <li class="list-group-item"><Link to= "/" component = { Profile }>Profile</Link></li>
+                <li class="list-group-item"><Link to= "/profile" component = { Profile }>Profile</Link></li>
                 <li class="list-group-item"><Link to= "/workouts" component = { Workouts } >Workouts</Link></li>
                 <li class="list-group-item"><Link to= "/abs" component = { Abs }>Abs</Link></li>
                 <li class="list-group-item"><Link to= "/arms" component = { Arms }>Arms</Link></li>

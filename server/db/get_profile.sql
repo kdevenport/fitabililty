@@ -1,2 +1,2 @@
 SELECT * FROM profile
-WHERE $1 = id;
+-- WHERE id = $1;
