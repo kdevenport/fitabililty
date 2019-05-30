@@ -74,19 +74,19 @@ class Update extends Component{
         return(
             <div class="container">
                 <form>
-                    <div class="form-group">
+                    <div className="form-group">
                         <label for="name">Weight</label>
-                            <input class="form-control" type="text" id="weight" placeholder="Enter weight" onChange={(event) => this.updateWeight(event)}/>
+                            <input className="form-control" type="text" id="weight" placeholder="Enter weight" onChange={(event) => this.updateWeight(event)}/>
                         <label for="name">BMI</label>
-                            <input class="form-control mb-3" type="text" id="bmi" placeholder="Enter BMI" onChange={(event) => this.updateBMI(event)}/>
+                            <input className="form-control mb-3" type="text" id="bmi" placeholder="Enter BMI" onChange={(event) => this.updateBMI(event)}/>
                         <label for="img1">Front profile image</label>
-                            <input class="form-control" type="text" id="img1" placeholder="Enter profile image" onChange={(event) => this.updateImg1(event)}/>
+                            <input className="form-control" type="text" id="img1" placeholder="Enter profile image" onChange={(event) => this.updateImg1(event)}/>
                         <label for="img2">Side profile image</label>
-                            <input class="form-control" type="text" id="img2" placeholder="Enter side profile imgae" onChange={(event) => this.updateImg2(event)}/>
+                            <input className="form-control" type="text" id="img2" placeholder="Enter side profile imgae" onChange={(event) => this.updateImg2(event)}/>
                         <br></br>
                         <br></br>
-                            <button class="btn btn-primary mr-2" type="submit" onClick = {(event) => this.createResult(event)}>Submit</button>
-                            <button class="btn btn-primary" type="button" onClick={() => this.resetResult()}>Reset</button>
+                            <button className="btn btn-primary mr-2" type="submit" onClick = {(event) => this.createResult(event)}>Submit</button>
+                            <button className="btn btn-primary" type="button" onClick={() => this.resetResult()}>Reset</button>
                     </div>
                 </form>
            </div>

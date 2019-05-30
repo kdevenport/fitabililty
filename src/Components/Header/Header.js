@@ -6,24 +6,24 @@ import Update from '../Update/Update';
 
 function Header(){
     return(
-        <nav class= "navbar navbar-expand-sm navbar-dark bg-dark">
-            <div class="container"> 
-                <h3 class="navbar-brand">Fitability</h3>
-                <button class="navbar-toggler" 
+        <nav className= "navbar navbar-expand-sm navbar-dark bg-dark">
+            <div className="container"> 
+                <h3 className="navbar-brand">Fitability</h3>
+                <button className="navbar-toggler" 
                 data-toggle="collapse" 
                 data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <Link class="nav-link" to="/updateprofile" component = { Form }>Update Profile</Link>
+                <div className="collapse navbar-collapse" id="navbarCollapse">
+                    <ul className="navbar-nav ml-auto">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/updateprofile" component = { Form }>Update Profile</Link>
                         </li>
                         <li class="nav-item">
-                            <Link  class="nav-link" to="/updateresults" component = { Update }>Update Results</Link>
+                            <Link  className="nav-link" to="/updateresults" component = { Update }>Update Results</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to="/logout">Logout</Link>
+                            <Link className="nav-link" to="/logout">Logout</Link>
                         </li>
                 </ul>
             </div>

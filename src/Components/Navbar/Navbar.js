@@ -18,16 +18,16 @@ class Navbar extends Component{
     }
     render(){
         return(
-            <ul class="list-group">
-                <li class="list-group-item"><Link to= "/profile" component = { Profile }>Profile</Link></li>
-                <li class="list-group-item"><Link to= "/workouts" component = { Workouts } >Workouts</Link></li>
-                <li class="list-group-item"><Link to= "/abs" component = { Abs }>Abs</Link></li>
-                <li class="list-group-item"><Link to= "/arms" component = { Arms }>Arms</Link></li>
-                <li class="list-group-item"><Link to= "/back" component = { Back}>Back</Link></li>
-                <li class="list-group-item"><Link to= "/chest" component = { Chest }>Chest</Link></li>
-                <li class="list-group-item"><Link to= "/legs" component = { Legs }>Legs</Link></li>
-                <li class="list-group-item"><Link to= "/shoulders" component = { Shoulders }>Shoulders</Link></li>
-                <li class="list-group-item"><Link to= "/results" component = { Results }>Results</Link></li>
+            <ul className="list-group">
+                <li className="list-group-item"><Link to= "/profile" component = { Profile }>Profile</Link></li>
+                <li className="list-group-item"><Link to= "/workouts" component = { Workouts } >Workouts</Link></li>
+                <li className="list-group-item"><Link to= "/abs" component = { Abs }>Abs</Link></li>
+                <li className="list-group-item"><Link to= "/arms" component = { Arms }>Arms</Link></li>
+                <li className="list-group-item"><Link to= "/back" component = { Back}>Back</Link></li>
+                <li className="list-group-item"><Link to= "/chest" component = { Chest }>Chest</Link></li>
+                <li className="list-group-item"><Link to= "/legs" component = { Legs }>Legs</Link></li>
+                <li className="list-group-item"><Link to= "/shoulders" component = { Shoulders }>Shoulders</Link></li>
+                <li className="list-group-item"><Link to= "/results" component = { Results }>Results</Link></li>
             </ul>
             
         )

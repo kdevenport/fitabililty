@@ -103,36 +103,36 @@ class Form extends Component {
     //Height had handleAgeChange being used instead of handleHeightChange
     render(){
         return(
-            <div class="container">
+            <div className="container">
             <form>
-                <div class="form-group">
+                <div className="form-group">
                     <label for="first-name">First name</label>
-                        <input class="form-control" type="text" id="first-name" placeholder="Enter first name"
+                        <input className="form-control" type="text" id="first-name" placeholder="Enter first name"
                         onChange={(event) => this.handleFirstNameChange(event)}/>
                     <label for="last-name">Last name</label>
-                        <input class="form-control" type="text" id="last-name" placeholder="Enter last name"
+                        <input className="form-control" type="text" id="last-name" placeholder="Enter last name"
                         onChange={(event) => this.handleLastNameChange(event)}/>
                     <label for="age">Age</label>
-                        <input class="form-control" type="text" id="age" placeholder="Enter age"
+                        <input className="form-control" type="text" id="age" placeholder="Enter age"
                         onChange={(event) => this.handleAgeChange(event)}/>
                     <label for="name">Height</label>
-                        <input class="form-control" type="text" id="height" placeholder="Enter height"
+                        <input className="form-control" type="text" id="height" placeholder="Enter height"
                         onChange={(event) => this.handleHeightChange(event)}/>
                     <label for="name">Weight</label>
-                        <input class="form-control" type="text" id="weight" placeholder="Enter weight"
+                        <input className="form-control" type="text" id="weight" placeholder="Enter weight"
                         onChange={(event) => this.handleWeightChange(event)}/>
                     <label for="name">BMI</label>
-                        <input class="form-control mb-3" type="text" id="bmi" placeholder="Enter BMI"
+                        <input className="form-control mb-3" type="text" id="bmi" placeholder="Enter BMI"
                         onChange={(event) => this.handleBMIChange(event)}/>
                     <label for="profileImg1">Front Profile Image</label>
-                        <input class="form-control" type="text" id="profileImg1" placeholder="Enter front profile image" onChange={(event) => this.handleImg1Change(event)}/>
+                        <input className="form-control" type="text" id="profileImg1" placeholder="Enter front profile image" onChange={(event) => this.handleImg1Change(event)}/>
                     <label for="profileImg2">Side Profile Image</label>
-                        <input class="form-control" type="text" id="profileImg2" placeholder="Enter side profile image" onChange={(event) => this.handleImg2Change(event)}/>
+                        <input className="form-control" type="text" id="profileImg2" placeholder="Enter side profile image" onChange={(event) => this.handleImg2Change(event)}/>
                     <br></br>
                     <br></br>
                     <div>
-                        <button class="btn btn-primary mr-2" type="submit" onClick = {(event) => this.createProfile(event)}>Submit</button>
-                        <button class="btn btn-primary" type="button" onClick = {(event) => this.updateProfile(event)}>Edit</button>
+                        <button className="btn btn-primary mr-2" type="submit" onClick = {(event) => this.createProfile(event)}>Submit</button>
+                        <button className="btn btn-primary" type="button" onClick = {(event) => this.updateProfile(event)}>Edit</button>
                     </div>
                 </div>
            </form>
