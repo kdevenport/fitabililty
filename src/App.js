@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import { HashRouter } from 'react-router-dom';
-import Header from './Components/Header/Header';
-import Navbar from './Components/Navbar/Navbar';
-import Routes from './Routes';
-
-
-
-
+import AuthenticatedLayout from './Components/AuthenticatedLayout/AuthenticatedLayout';
+import UnauthenticatedLayout from './Components/UnauthenticatedLayout/UnauthenticatedLayout';
+import axios from 'axios';
 
 
 class App extends Component {
+  state = {
+    fetcheduser:false,
+  }
+
+  componentDidMount(){
+    axios.get('/api/me')
+  }
+
   render() {
     return (
       <div className="App">
-       <Header /> 
-       <Navbar />
-       { Routes }
+       {/* <AuthenticatedLayout /> */}
+       <UnauthenticatedLayout />
+      
       </div>
     );
   }

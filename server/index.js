@@ -156,12 +156,14 @@ app.post('/api/results', controller.create_result);
 app.put('/api/results/:id', controller.update_result);
 app.get('/api/result/:id', controller.get_result);
 
-// //Endpoints for Profile
+ //Endpoints for Profile
 app.get('/api/profile', controller.get_profile);
 app.post('/api/profile', controller.create_profile);
 app.put('/api/profile/:id', controller.update_profile);
-
-
+// Has user logged in before
+app.get('/api/me', (req,res) => {
+    res.send(req.user)
+});
 
 
 const PORT = process.env.SERVER_PORT || 3111;
