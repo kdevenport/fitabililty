@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form } from 'react-bootstrap';
-import './Login.css';
+import { Link } from 'react-router-dom';
 
 class Login extends Component {
     constructor(){
@@ -35,7 +35,8 @@ class Login extends Component {
                     </div>
                     <div>
                     <button class="btn btn-primary mr-2">Login</button>
-                    <button class="btn btn-primary">Register</button>
+                    <button class="btn btn-primary"> 
+                    <Link to= "/register">Register</Link></button>
                 </div>
                 </Form>
             </div>

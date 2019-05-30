@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch} from 'react-router-dom';
+import { Route, Switch, Redirect} from 'react-router-dom';
 
 import Profile from './Components/Profile/Profile';
 import Abs from './Components/Abs/Abs';
@@ -31,5 +31,7 @@ export default(
         <Route component =  { Workouts } path = '/workouts' />
         <Route component = { Form } path ='/updateprofile'/>
         <Route component = { Update } path ='/updateresults'/>
+        <Redirect to= '/login' />
+        
     </Switch>
 )

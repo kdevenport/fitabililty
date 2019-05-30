@@ -5,10 +5,16 @@ class Register extends Component{
         super();
 
         this.state = {
+            name: '',
             username: '',
             password: '',
             emailAddress: ''
         }
+    }
+    handleNameChange = (event) => {
+        this.setState({
+            name: event.target.value
+        })
     }
     handleUsernameChange = (event) => {
         this.setState({
@@ -29,15 +35,18 @@ class Register extends Component{
         return(
             <div claas="container">
                 <form>
-                    <div class="form-group">
+                    <div className="form-group">
+                    <label for="username">Name</label>
+                            <input className="form-control" type="text" id="name" placeholder="Enter username"
+                            onChange={(event) => this.NameChange(event)}></input>
                         <label for="username">Username</label>
-                            <input class="form-control" type="text" id="username" placeholder="Enter username"
+                            <input className="form-control" type="text" id="username" placeholder="Enter username"
                             onChange={(event) => this.handleUsernameChange(event)}></input>
                         <label for="password">Password</label>
-                            <input class="form-control" type="text" id="password" placeholder="Enter password"
+                            <input className="form-control" type="text" id="password" placeholder="Enter password"
                             onChange={(event) => this.handlePasswordChange(event)}></input>
                         <label for="emailAddress">Email Address</label>
-                            <input class="form-control" type="text" id="emailAddress" placeholder="Enter email address"
+                            <input className="form-control" type="text" id="emailAddress" placeholder="Enter email address"
                             onChange={(event) => this.handleEmailAddressChange(event)}></input>
                     </div>
                     <br></br>

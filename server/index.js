@@ -10,24 +10,27 @@ const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
 require('dotenv').config({ path: __dirname + '/config/.env'});
 
-
+// destructuring from .env
 const {
     CONNECTION_STRING
 } = process.env;
 
 const app = express();
 app.use(cors());
+
+// setup express server
+// configure app to use sessions and passport
 app.use(bodyParser.json());
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave:false,
     saveUninitialized: false
 }));
+
+// always use with passport
 app.use(passport.initialize() );
+// alwlays use with session
 app.use(passport.session() );
-
-
-
 
 
 massive(CONNECTION_STRING, { scripts: __dirname + '/db' }).then((dbInstance) => {
@@ -36,7 +39,7 @@ massive(CONNECTION_STRING, { scripts: __dirname + '/db' }).then((dbInstance) => 
 }).catch((error) =>{
     console.log(error);
 })
-
+// register a user
 passport.use('register', new LocalStrategy({
     passReqToCallback: true,
 }, (req, username, password, done) => {
@@ -46,8 +49,7 @@ passport.use('register', new LocalStrategy({
     db.query(`
         select * from "Users"
         where email ilike \${email}
-            OR username ilike \${username}
-    `, { username, email })
+            OR username ilike \${username}`, { username, email })
         .then(users => {
             if (users.length > 0) {
                 return done('Username or email is already in use');
@@ -80,6 +82,7 @@ passport.use('register', new LocalStrategy({
         });
 }));
 
+// configure passport, take in middleware name and new 'strategy
 passport.use('login', new LocalStrategy({ usernameField: 'email' }, (email, password, done) => {
     const db = app.get('db');
 
@@ -88,7 +91,7 @@ passport.use('login', new LocalStrategy({ usernameField: 'email' }, (email, pass
             if (users.length == 0) {
                 return done('Username or password is incorrect');
             }
-
+            // if find user, store user in variable
             const user = users[0];
 
             bcrypt.compare(password, user.password, (err, isSame) => {
@@ -110,7 +113,7 @@ passport.use('login', new LocalStrategy({ usernameField: 'email' }, (email, pass
             done('System failure');
         });
 }));
-
+// Properties that we want to store on a session
 passport.serializeUser((user, done) => {
     done(null, user.id);
 });
@@ -132,26 +135,19 @@ passport.deserializeUser((id, done) => {
         });
 });
 
-app.use(passport.initialize() );
-app.use(passport.session() );
-
+// register endpoint
 app.post('/auth/register', passport.authenticate('register'), (req, res) => {
     res.send({ message: 'Successfully registered', user: req.user });
 });
-
+// login endpoint
 app.post('/auth/login', passport.authenticate('login'), (req, res) => {
     res.send({ message: 'Successfully logged in', user: req.user });
 });
-
+// logout endpoint
 app.get('/auth/logout', (req, res) => {
     req.logout();
     res.sendStatus(200);
 });
-
-app.get('/api/me', (req, res) => {
-    res.send(req.user);
-});
-
 
 //Endpoints for Results
 app.get('/api/results', controller.get_results);
