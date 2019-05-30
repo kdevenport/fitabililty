@@ -11,7 +11,11 @@ class App extends Component {
   }
 
   componentDidMount(){
-    axios.get('/api/me')
+    axios.get('/api/me').then(response => {
+      
+    }
+
+    )
   }
 
   render() {

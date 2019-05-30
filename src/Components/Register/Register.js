@@ -33,25 +33,23 @@ class Register extends Component{
     }
     render(){
         return(
-            <div claas="container">
+            <div id="container">
                 <form>
                     <div className="form-group">
                     <label for="username">Name</label>
-                            <input className="form-control" type="text" id="name" placeholder="Enter username"
+                            <input className="form-control" type="text" id="name" 
                             onChange={(event) => this.NameChange(event)}></input>
                         <label for="username">Username</label>
-                            <input className="form-control" type="text" id="username" placeholder="Enter username"
+                            <input className="form-control" type="text" id="username" 
                             onChange={(event) => this.handleUsernameChange(event)}></input>
                         <label for="password">Password</label>
-                            <input className="form-control" type="text" id="password" placeholder="Enter password"
+                            <input className="form-control" type="text" id="password" 
                             onChange={(event) => this.handlePasswordChange(event)}></input>
                         <label for="emailAddress">Email Address</label>
-                            <input className="form-control" type="text" id="emailAddress" placeholder="Enter email address"
+                            <input className="form-control" type="text" id="emailAddress" 
                             onChange={(event) => this.handleEmailAddressChange(event)}></input>
-                    </div>
-                    <br></br>
-                    <br></br>
-                    <button>Submit</button>
+                            <button className="btn" type="submit">Submit</button>
+                        </div>
                 </form>
 
             </div>

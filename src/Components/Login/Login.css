@@ -1,0 +1,38 @@
+#container {
+    margin:30px auto;
+    max-width: 400px;
+    padding:20px;
+    font-size: 25px;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+.form-group {
+    background:#CCCCCC;
+    padding:15px 25px;
+    line-height: 1.8;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.form-group button {
+    background-color: black;
+    display:block;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background: blue;
+    
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid black;
+}

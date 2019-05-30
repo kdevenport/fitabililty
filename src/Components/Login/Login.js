@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+import './Login.css';
+
 class Login extends Component {
     constructor(){
         super();
@@ -23,20 +25,21 @@ class Login extends Component {
     }
     render(){
         return(
-            <div class="container">
+            <div id="container">
                 <Form>
                     <div class="form-group">
                     <label for="username">Username</label>
-                        <input class="form-control" type="text" id="username"
+                        <input class="form-control" type="text"
                         onChange = {(event) => this.handleUsernameUpdate(event)}/>
                     <label for="password">Password</label>
-                        <input class="form-control" type="text" id="password"
+                        <input class="form-control" type="text" 
                         onChange = {(event) => this.handlePasswordUpdate(event)}/>
-                    </div>
                     <div>
-                    <button class="btn btn-primary mr-2">Login</button>
-                    <button class="btn btn-primary"> 
-                    <Link to= "/register">Register</Link></button>
+                    <button className="btn  mr-2">Login</button>
+                    <button className="btn" id="link"> 
+                    <Link to= "/register">Register</Link>
+                    </button>
+                    </div>
                 </div>
                 </Form>
             </div>
