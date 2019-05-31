@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 import Form from '../Form/Form';
 import Update from '../Update/Update';
 
+import './Header.css';
+
 
 function Header(){
     return(
-        <nav className= "navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav  id="navbar"className= "navbar navbar-expand-sm">
             <div className="container"> 
-                <h3 className="navbar-brand">Fitability</h3>
+                <img src="/images/fiticon.png" />
+                <h2 className="navbar-brand">Fitability</h2>
                 <button className="navbar-toggler" 
                 data-toggle="collapse" 
                 data-target="#navbarCollapse">

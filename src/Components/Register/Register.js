@@ -38,7 +38,7 @@ class Register extends Component{
                     <div className="form-group">
                     <label for="username">Name</label>
                             <input className="form-control" type="text" id="name" 
-                            onChange={(event) => this.NameChange(event)}></input>
+                            onChange={(event) => this.handleNameChange(event)}></input>
                         <label for="username">Username</label>
                             <input className="form-control" type="text" id="username" 
                             onChange={(event) => this.handleUsernameChange(event)}></input>
