@@ -26,7 +26,6 @@ class Results extends Component{
         })
     }
     deleteResult = (id) => {
-        //const{getResult} = this.props; -Not needed. Delete didn't work because it was getResult();
         axios.delete(`/api/results/${id}`).then( response => {
             this.getResults();
         })
