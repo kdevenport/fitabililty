@@ -12,7 +12,7 @@ class App extends Component {
 
   componentDidMount(){
     axios.get('/api/me').then(response => {
-      
+
     }
 
     )
@@ -21,8 +21,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       {/* <AuthenticatedLayout /> */}
-       <UnauthenticatedLayout />
+       <AuthenticatedLayout />
+       {/* <UnauthenticatedLayout /> */}
       
       </div>
     );

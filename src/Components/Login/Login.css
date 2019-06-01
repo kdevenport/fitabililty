@@ -8,15 +8,16 @@
 }
 
 .form-group {
-    background: #E0E0E0;
+    background: black;
     padding:15px 25px;
     line-height: 1.8;
     border-radius: 5px;
     border: 1px solid black;
+    color:white;
 }
 
 .form-group button {
-    background-color: black;
+    background-color: blueviolet;
     display:block;
     color: white;
     margin-top: 20px;
@@ -28,7 +29,8 @@
 
 .btn:hover{
     cursor: pointer;
-    background: blue;
+    background: white;
+    color: blueviolet;
     
 }
 

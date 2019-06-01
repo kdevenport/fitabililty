@@ -18,6 +18,7 @@ class Navbar extends Component{
     }
     render(){
         return(
+            <div className="nav">
             <ul className="list-group">
                 <li className="list-group-item"><Link to= "/profile" component = { Profile }>Profile</Link></li>
                 <li className="list-group-item"><Link to= "/workouts" component = { Workouts } >Workouts</Link></li>
@@ -29,6 +30,7 @@ class Navbar extends Component{
                 <li className="list-group-item"><Link to= "/shoulders" component = { Shoulders }>Shoulders</Link></li>
                 <li className="list-group-item"><Link to= "/results" component = { Results }>Results</Link></li>
             </ul>
+            </div>
             
         )
     }

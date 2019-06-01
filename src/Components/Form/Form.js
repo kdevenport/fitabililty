@@ -128,8 +128,6 @@ class Form extends Component {
                         <input className="form-control" type="text" id="profileImg1" placeholder="Enter front profile image" onChange={(event) => this.handleImg1Change(event)}/>
                     <label for="profileImg2">Side Profile Image</label>
                         <input className="form-control" type="text" id="profileImg2" placeholder="Enter side profile image" onChange={(event) => this.handleImg2Change(event)}/>
-                    <br></br>
-                    <br></br>
                     <div>
                         <button className="btn btn-primary mr-2" type="submit" onClick = {(event) => this.createProfile(event)}>Submit</button>
                         <button className="btn btn-primary" type="button" onClick = {(event) => this.updateProfile(event)}>Edit</button>

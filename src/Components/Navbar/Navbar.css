@@ -1,6 +1,19 @@
+.list-group {
+    position: fixed;
+    width: 20%;
+    height: 100vh;
+  }
 
-/* ul.list-group {
- width: 12%;
- height: 100vh;
- text-align: center;
-} */
+.nav {
+    position: relative;
+    /* margin: 0 15%; */
+    text-align: right;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+  }
+  .list-group-item {
+    position: relative;
+    margin: 2.5em 0;
+  }
+  

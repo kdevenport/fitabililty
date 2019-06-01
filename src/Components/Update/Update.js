@@ -83,8 +83,6 @@ class Update extends Component{
                             <input className="form-control" type="text" id="img1" placeholder="Enter profile image" onChange={(event) => this.updateImg1(event)}/>
                         <label for="img2">Side profile image</label>
                             <input className="form-control" type="text" id="img2" placeholder="Enter side profile imgae" onChange={(event) => this.updateImg2(event)}/>
-                        <br></br>
-                        <br></br>
                             <button className="btn btn-primary mr-2" type="submit" onClick = {(event) => this.createResult(event)}>Submit</button>
                             <button className="btn btn-primary" type="button" onClick={() => this.resetResult()}>Reset</button>
                     </div>
