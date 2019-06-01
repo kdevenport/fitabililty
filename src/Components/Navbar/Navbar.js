@@ -20,15 +20,15 @@ class Navbar extends Component{
         return(
             <div className="nav">
             <ul className="list-group">
-                <li className="list-group-item"><Link to= "/profile" component = { Profile }>Profile</Link></li>
-                <li className="list-group-item"><Link to= "/workouts" component = { Workouts } >Workouts</Link></li>
-                <li className="list-group-item"><Link to= "/abs" component = { Abs }>Abs</Link></li>
-                <li className="list-group-item"><Link to= "/arms" component = { Arms }>Arms</Link></li>
-                <li className="list-group-item"><Link to= "/back" component = { Back}>Back</Link></li>
-                <li className="list-group-item"><Link to= "/chest" component = { Chest }>Chest</Link></li>
-                <li className="list-group-item"><Link to= "/legs" component = { Legs }>Legs</Link></li>
-                <li className="list-group-item"><Link to= "/shoulders" component = { Shoulders }>Shoulders</Link></li>
-                <li className="list-group-item"><Link to= "/results" component = { Results }>Results</Link></li>
+                <li className="list-group-item"><Link style={{ textDecoration: 'none', color: 'white' }} className="text-link" to= "/profile" component = { Profile }>Profile</Link></li>
+                <li className="list-group-item"><Link style={{ textDecoration: 'none', color: 'white' }} className="text-link" to= "/workouts" component = { Workouts } >Workouts</Link></li>
+                <li className="list-group-item"><Link style={{ textDecoration: 'none', color: 'white' }} className="text-link" to= "/abs" component = { Abs }>Abs</Link></li>
+                <li className="list-group-item"><Link style={{ textDecoration: 'none', color: 'white' }}className="text-link" to= "/arms" component = { Arms }>Arms</Link></li>
+                <li className="list-group-item"><Link style={{ textDecoration: 'none', color: 'white' }}className="text-link" to= "/back" component = { Back}>Back</Link></li>
+                <li className="list-group-item"><Link style={{ textDecoration: 'none', color: 'white' }}className="text-link" to= "/chest" component = { Chest }>Chest</Link></li>
+                <li className="list-group-item"><Link style={{ textDecoration: 'none', color: 'white' }} className="text-link" to= "/legs" component = { Legs }>Legs</Link></li>
+                <li className="list-group-item"><Link style={{ textDecoration: 'none', color: 'white' }} className="text-link" to= "/shoulders" component = { Shoulders }>Shoulders</Link></li>
+                <li className="list-group-item"><Link style={{ textDecoration: 'none', color: 'white' }} className="text-link" to= "/results" component = { Results }>Results</Link></li>
             </ul>
             </div>
             

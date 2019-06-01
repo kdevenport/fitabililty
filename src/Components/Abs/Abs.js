@@ -1,6 +1,8 @@
 import React, {Component}from 'react';
 import { CardColumns, Card} from 'react-bootstrap';
 
+import './Abs.css';
+
 class Abs extends Component{
     render(){
         return(

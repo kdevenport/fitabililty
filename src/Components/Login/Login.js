@@ -37,8 +37,8 @@ class Login extends Component {
                     <div>
                     <button className="btn  mr-2">Login</button>
                     <button className="btn" id="link"> 
-                    <Link to= "/register">Register</Link>
-                    </button>
+                    <Link style={{ textDecoration: 'none', color: 'white' }} to= "/register">Register</Link>
+                    </button> 
                     </div>
                 </div>
                 </Form>

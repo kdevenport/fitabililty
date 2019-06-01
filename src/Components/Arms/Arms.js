@@ -1,6 +1,7 @@
 import React, {Component}from 'react';
-import { Card} from 'react-bootstrap';
-// import images from './images/triceps_pushdown.png';
+import { Card } from 'react-bootstrap';
+
+import './Arms.css';
 
 class Arms extends Component{
     render(){

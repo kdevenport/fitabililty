@@ -1,19 +1,34 @@
 .list-group {
+    display: block;
     position: fixed;
     width: 20%;
     height: 100vh;
+    background: blueviolet;
+    text-decoration: none;
+    
   }
 
 .nav {
     position: relative;
-    /* margin: 0 15%; */
-    text-align: right;
+    text-align: center;
     top: 50%;
     transform: translateY(-50%);
     font-weight: bold;
+    text-decoration: none;
+    height:100%;
   }
   .list-group-item {
     position: relative;
-    margin: 2.5em 0;
+    background: blueviolet;
+    text-decoration: none;
+    border: none;
   }
   
+  .text-link {
+    line-height: 5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.4em;
+    display: block;
+    transition: all ease-out 300ms;
+  }

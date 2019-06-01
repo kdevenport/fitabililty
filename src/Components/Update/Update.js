@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import './Update.css';
+
 class Update extends Component{
     constructor(props){
         super(props);
@@ -72,7 +74,7 @@ class Update extends Component{
     }
     render(){
         return(
-            <div class="container">
+            <div id="update-result" class="container">
                 <form>
                     <div className="form-group">
                         <label for="name">Weight</label>

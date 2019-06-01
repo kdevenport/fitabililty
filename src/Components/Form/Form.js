@@ -1,6 +1,8 @@
 import React, { Component} from 'react';
 import axios from 'axios';
 
+import './Form.css';
+
 class Form extends Component {
     constructor(props){
         super(props);
@@ -100,10 +102,10 @@ class Form extends Component {
             this.props.history.push('/');
         })
     }
-    //Height had handleAgeChange being used instead of handleHeightChange
+    
     render(){
         return(
-            <div className="container">
+            <div id="profile-form" className="container">
             <form>
                 <div className="form-group">
                     <label for="first-name">First name</label>

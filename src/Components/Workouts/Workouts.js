@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 
+import './Workouts.css';
+
 class Workouts extends Component{
     constructor(){
         super();
     }
     render(){
         return(
-            <div class="container">
+            <div id="workouts" class="container">
             <div>
                 <h5>20 Minute Better Body Workout</h5>
                 <ul class="list-unstyled">

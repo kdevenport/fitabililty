@@ -10,7 +10,7 @@ function Header(){
     return(
         <nav  id="navbar"className= "navbar navbar-expand-sm">
             <div className="container"> 
-                <img src="/images/fiticon.png" />
+                <img className="navbar-image" src="/images/fiticon.png" />
                 <h2 className="navbar-brand">Fitability</h2>
                 <button className="navbar-toggler" 
                 data-toggle="collapse" 
