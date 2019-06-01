@@ -22,7 +22,7 @@ app.use(cors());
 // configure app to use sessions and passport
 app.use(bodyParser.json());
 app.use(session({
-    secret: process.env.SESSION_SECRET,
+    secret: "secret",
     resave:false,
     saveUninitialized: false
 }));

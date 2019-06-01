@@ -1,5 +1,5 @@
 import React, {Component}from 'react';
-import { CardColumns, Card} from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 
 import './Abs.css';
 
@@ -11,7 +11,7 @@ class Abs extends Component{
                     <Card.Body>
                     <Card.Img variant="top" src="/images/seated_abdominal_crunch.png" />
                     <Card.Title>
-                        <h4 class="text-center">Seated (Resisted) Abdominal Crunch</h4>
+                        <h4 className="text-center">Seated (Resisted) Abdominal Crunch</h4>
                     </Card.Title>
                     <Card.Text>
                         <h5>Muscles worked</h5>
